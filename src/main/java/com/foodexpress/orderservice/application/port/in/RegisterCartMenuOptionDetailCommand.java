@@ -1,9 +1,9 @@
-package com.foodexpress.orderservice.adapter.in.web;
+package com.foodexpress.orderservice.application.port.in;
 
 import lombok.Data;
 
 @Data
-public class RegisterCartItemOptionDetailRequest {
+public class RegisterCartMenuOptionDetailCommand {
 
     /**
      * 옵션 상세 식별자

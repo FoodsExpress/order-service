@@ -1,6 +1,9 @@
 package com.foodexpress.orderservice.adapter.in.web;
 
+import com.foodexpress.orderservice.application.port.in.RegisterCartCommand;
 import lombok.Data;
+
+import java.util.List;
 
 @Data
 public class RegisterCartRequest {
@@ -10,6 +13,13 @@ public class RegisterCartRequest {
      */
     private String storeId;
 
-    private List<RegisterCartItemRequest> cartItems;
+    private List<RegisterCartMenuRequest> cartItems;
+
+    public RegisterCartCommand mapToCommand() {
+        RegisterCartCommand command = new RegisterCartCommand();
+        command.setStoreId(storeId);
+        command.setCartItems(this.cartItems.stream().map(RegisterCartMenuRequest::mapToCommand).toList());
+        return command;
+    }
 
 }
