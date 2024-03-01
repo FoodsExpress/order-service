@@ -1,5 +1,6 @@
 package com.foodexpress.orderservice.application.port.in;
 
+import com.foodexpress.orderservice.domain.Cart;
 import lombok.Data;
 
 import java.util.List;
@@ -21,5 +22,9 @@ public class RegisterCartMenuCommand {
      * 메뉴 옵션 목록
      */
     private List<RegisterCartMenuOptionCommand> menuOptions;
+
+    public Cart mapToDomain() {
+        return Cart.builder().build();
+    }
 
 }
