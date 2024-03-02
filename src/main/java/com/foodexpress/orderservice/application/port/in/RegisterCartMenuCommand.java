@@ -11,7 +11,7 @@ public class RegisterCartMenuCommand {
     /**
      * 상품 식별자
      */
-    private String catalogId;
+    private String menuId;
 
     /**
      * 수량

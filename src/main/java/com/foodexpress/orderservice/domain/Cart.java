@@ -18,7 +18,7 @@ public record Cart(
     // 장바구니 상태
     CartStatus cartStatus,
     // 고객이 구매하는 제품의 항목별 목록
-    List<CartMenu> cartLineItems,
+    List<CartMenu> cartMenus,
     // 장바구니 생성 시각
     LocalDateTime createdAt,
     // 마지막 수정 시각

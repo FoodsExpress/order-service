@@ -1,5 +1,7 @@
 package com.foodexpress.orderservice.domain;
 
+import java.util.List;
+
 public record CartMenu(
     // 컬렉션의 각 줄 항목은 고유 줄 번호(0에서 1까지 셈)를 가져옵니다.
     int lineItemNumber,
@@ -7,7 +9,8 @@ public record CartMenu(
     // 메뉴 명
     String menuName,
     // 수량
-    int quantity
+    int quantity,
+    List<CartMenuOption> menuOptions
 ) {
 
 }
