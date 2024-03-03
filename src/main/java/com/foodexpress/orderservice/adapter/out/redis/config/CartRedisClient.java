@@ -14,7 +14,7 @@ import java.util.Optional;
 @Slf4j
 @Configuration
 @RequiredArgsConstructor
-public class RedisClient {
+public class CartRedisClient {
 
     private final RedisTemplate<String, Object> redisTemplate;
 
